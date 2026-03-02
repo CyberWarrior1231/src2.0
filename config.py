@@ -9,8 +9,18 @@ API_ID = int(os.environ.get("API_ID", "29490954"))
 # Your API Hash from my.telegram.org
 API_HASH = os.environ.get("API_HASH", "dbd8f5af56b0f6e16327c20a84eece99")
 
-# Your Owner / Admin Id For Broadcast 
-ADMINS = int(os.environ.get("ADMINS", "8327651421"))
+# Your Owner / Admin Id For Broadcast
+OWNER_ID = os.environ.get("OWNER_ID", "8327651421")
+OWNER_ID = int(OWNER_ID)
+
+_admins_env = os.environ.get("ADMINS", str(OWNER_ID))
+if "," in _admins_env:
+    ADMINS = [int(admin_id.strip()) for admin_id in _admins_env.split(",") if admin_id.strip()]
+else:
+    ADMINS = [int(_admins_env)] if _admins_env.strip() else [OWNER_ID]
+
+if OWNER_ID not in ADMINS:
+    ADMINS.append(OWNER_ID)
 
 # Your Mongodb Database Url
 # Warning - Give Db uri in deploy server environment variable, don't give in repo.
@@ -30,4 +40,5 @@ ERROR_MESSAGE = bool(os.environ.get('ERROR_MESSAGE', True))
 # Crypto Pay API Configuration (@CryptoBot / @send)
 # Get your API token from https://t.me/CryptoBot?start=pay -> Create App
 CRYPTO_PAY_API_TOKEN = os.environ.get("CRYPTO_PAY_API_TOKEN", "")  # Your Crypto Pay API token
+
 CRYPTO_PAY_TESTNET = os.environ.get("CRYPTO_PAY_TESTNET", "False").lower() == "true"  # Set to True for testing with @CryptoTestnetBot
