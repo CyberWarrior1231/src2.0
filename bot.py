@@ -71,8 +71,8 @@ class Bot(Client):
         
         print('='*50)
         print('RESTRICTED CONTENT DOWNLOAD BOT STARTED')
-        print('Made by: Surya (@tataa_sumo)')
-        print('Channel: @idfinderpro')
+        print('Made by: Sᴘᴀʀᴋ ♨')
+        print('Channel: @thekmx')
         print('='*50)
 
     async def stop(self, *args):
@@ -94,3 +94,4 @@ if __name__ == "__main__":
         traceback.print_exc()
         # Exit with error code so the service manager knows something went wrong
         sys.exit(1)
+
