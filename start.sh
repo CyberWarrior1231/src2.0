@@ -9,7 +9,7 @@ echo "Made by: Spark (@Kmxretro)"
 echo "========================================"
 
 # Check if session file exists and is valid
-if [ -f "idfinderpro.session" ]; then
+if [ -f "thekmx.session" ]; then
     echo "Found existing session file..."
 else
     echo "No session file found - will create new one..."
@@ -28,5 +28,6 @@ sleep 2
 # Start the bot (this keeps running in foreground)
 echo "Starting Telegram bot..."
 python3 bot.py
+
 
 
