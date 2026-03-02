@@ -313,7 +313,7 @@ async def send_start(client: Client, message: Message):
         InlineKeyboardButton("📖 Help", callback_data="help"),
         InlineKeyboardButton("💎 Premium", callback_data="premium_info")
     ],[
-        InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/tataa_sumo"),
+        InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/Kmxretro"),
         InlineKeyboardButton("📢 Channel", url=f"https://t.me/{FORCE_SUB_CHANNEL}")
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -558,7 +558,7 @@ async def callback_handler(client: Client, query):
             InlineKeyboardButton("📖 Help", callback_data="help"),
             InlineKeyboardButton("💎 Premium", callback_data="premium_info")
         ],[
-            InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/tataa_sumo"),
+            InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/Kmxretro"),
             InlineKeyboardButton("📢 Channel", url=f"https://t.me/{FORCE_SUB_CHANNEL}")
         ]]
         
@@ -732,7 +732,7 @@ Choose the duration that works best for you:
         receiver_name = upi_details['receiver_name']
         
         # Get admin handle
-        admin_handle = await db.get_global_setting('admin_telegram_handle', '@tataa_sumo')
+        admin_handle = await db.get_global_setting('admin_telegram_handle', '@Kmxretro')
         
         if not upi_id or not receiver_name:
             await query.answer("❌ UPI payment not configured yet! Contact admin.", show_alert=True)
@@ -813,7 +813,7 @@ Choose the duration that works best for you:
         amount_usd = await db.get_global_setting(f"pricing_{plan}_usd", 0.15)
         plan_name = plan.replace('day', ' Days' if 'day' in plan and plan[0] != '1' else ' Day')
         
-        admin_handle = await db.get_global_setting('admin_telegram_handle', '@tataa_sumo')
+        admin_handle = await db.get_global_setting('admin_telegram_handle', '@Kmxretro')
         user_id = query.from_user.id
         
         text = f"""**💵 USD/USDT Payment**
@@ -871,7 +871,7 @@ Choose the duration that works best for you:
         receiver_name = upi_details['receiver_name']
         
         # Get admin handle
-        admin_handle = await db.get_global_setting('admin_telegram_handle', '@tataa_sumo')
+        admin_handle = await db.get_global_setting('admin_telegram_handle', '@Kmxretro')
         
         if not upi_id or not receiver_name:
             await query.answer("❌ UPI payment not configured yet! Contact admin.", show_alert=True)
@@ -1022,7 +1022,7 @@ Manage bot-wide settings and pricing.
 • **1 Day Price:** ₹{settings.get('pricing_1day', 10)}
 • **7 Days Price:** ₹{settings.get('pricing_7day', 40)}
 • **30 Days Price:** ₹{settings.get('pricing_30day', 100)}
-• **Admin Handle:** {settings.get('admin_telegram_handle', '@tataa_sumo')}
+• **Admin Handle:** {settings.get('admin_telegram_handle', '@Kmxretro')}
 • **Free Daily Limit:** {settings.get('free_daily_limit', 10)} downloads
 • **Premium Daily Limit:** {settings.get('premium_daily_limit', 'Unlimited')}
 
@@ -1156,8 +1156,8 @@ I can help you download and forward restricted content from Telegram channels, g
             InlineKeyboardButton("📖 Help Guide", callback_data="help"),
             InlineKeyboardButton("🔐 Login", callback_data="login_info")
         ],[
-            InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/tataa_sumo"),
-            InlineKeyboardButton("📢 Updates", url="https://t.me/idfinderpro")
+            InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/Kmxretro"),
+            InlineKeyboardButton("📢 Updates", url="https://t.me/thekmx")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -2177,3 +2177,4 @@ def get_message_type(msg: pyrogram.types.messages_and_media.message.Message):
     except:
 
         pass
+
