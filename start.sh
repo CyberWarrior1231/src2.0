@@ -5,7 +5,7 @@
 
 echo "========================================"
 echo "Starting Restricted Content Download Bot"
-echo "Made by: Surya (@tataa_sumo)"
+echo "Made by: Spark (@Kmxretro)"
 echo "========================================"
 
 # Check if session file exists and is valid
@@ -28,4 +28,5 @@ sleep 2
 # Start the bot (this keeps running in foreground)
 echo "Starting Telegram bot..."
 python3 bot.py
+
 
