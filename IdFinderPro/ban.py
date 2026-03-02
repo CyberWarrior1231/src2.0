@@ -53,7 +53,7 @@ async def ban_command(client: Client, message: Message):
             "🚫 **You have been banned from using this bot.**\n\n"
             f"**Reason:** {reason}\n\n"
             "⚠️ This may be due to violation of our terms or downloading inappropriate content.\n\n"
-            "📩 **Contact admin for unban:** @tataa_sumo"
+            "📩 **Contact admin for unban:** @kmxretro "
         )
         notification_sent = True
     except PeerIdInvalid:
@@ -177,4 +177,5 @@ async def banlist_command(client: Client, message: Message):
     ban_text += f"\n📊 **Total Banned:** {len(banned_users)}"
     
     await message.reply_text(ban_text)
+
 
