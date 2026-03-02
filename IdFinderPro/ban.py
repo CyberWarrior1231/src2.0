@@ -12,7 +12,7 @@ async def ban_command(client: Client, message: Message):
     user_id = message.from_user.id
     
     # Check if user is admin
-    if user_id != ADMINS:
+    if int(user_id) not in ADMINS:
         await message.reply_text("❌ **You are not authorized to use this command.**")
         return
     
@@ -78,7 +78,7 @@ async def unban_command(client: Client, message: Message):
     user_id = message.from_user.id
     
     # Check if user is admin
-    if user_id != ADMINS:
+    if int(user_id) not in ADMINS:
         await message.reply_text("❌ **You are not authorized to use this command.**")
         return
     
@@ -138,7 +138,7 @@ async def banlist_command(client: Client, message: Message):
     user_id = message.from_user.id
     
     # Check if user is admin
-    if user_id != ADMINS:
+    if int(user_id) not in ADMINS:
         await message.reply_text("❌ **You are not authorized to use this command.**")
         return
     
@@ -177,3 +177,4 @@ async def banlist_command(client: Client, message: Message):
     ban_text += f"\n📊 **Total Banned:** {len(banned_users)}"
     
     await message.reply_text(ban_text)
+
