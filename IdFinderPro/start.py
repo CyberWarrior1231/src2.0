@@ -1241,7 +1241,7 @@ async def save(client: Client, message: Message):
         await message.reply(
             "🚫 **You are banned from using this bot!**\n\n"
             f"**Reason:** {reason}\n\n"
-            "📩 **Contact admin for unban:** @tataa_sumo"
+            "📩 **Contact admin for unban:** @kmxretro "
         )
         return
     
@@ -2177,4 +2177,5 @@ def get_message_type(msg: pyrogram.types.messages_and_media.message.Message):
     except:
 
         pass
+
 
