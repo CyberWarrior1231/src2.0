@@ -1,7 +1,7 @@
 HELP_TXT = """**📖 HELP - Restricted Content Download Bot**
 
 **🚀 Quick Start:**
-1. Join @idfinderpro (Required)
+1. Join @thekmx (Required)
 2. Use /login to authenticate with your account
 3. Send any Telegram post link
 4. Get your content instantly!
@@ -104,7 +104,7 @@ PREMIUM_HELP = """**💎 Premium Membership - Unlock Full Power**
 /redeem YOUR_CODE
 
 **3️⃣ Contact Admin:**
-@tataa_sumo
+@Kmxretro
 
 **Check Your Plan:**
 Use /premium to see details
@@ -143,6 +143,7 @@ COMMANDS_HELP = """**⚙️ Available Commands - Full Reference**
 ━━━━━━━━━━━━━━━━━━━
 
 **📞 Support & Info:**
-Developer: @tataa_sumo
-Channel: @idfinderpro
+Developer: @Kmxretro
+Channel: @thekmx
 """
+
