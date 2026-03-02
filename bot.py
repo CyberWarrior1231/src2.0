@@ -25,7 +25,7 @@ class Bot(Client):
 
     def __init__(self):
         super().__init__(
-            "idfinderpro",
+            "thekmx",
             api_id=API_ID,
             api_hash=API_HASH,
             bot_token=BOT_TOKEN,
@@ -94,4 +94,5 @@ if __name__ == "__main__":
         traceback.print_exc()
         # Exit with error code so the service manager knows something went wrong
         sys.exit(1)
+
 
