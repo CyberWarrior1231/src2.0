@@ -694,18 +694,10 @@ Choose the duration that works best for you:
         
         plan_name = plan.replace('day', ' Days' if 'day' in plan and plan[0] != '1' else ' Day')
         
-        text = f"""**💳 Select Payment Method**
-
-**Plan:** {plan_name}
-**Price:** ₹{pricing_inr} (INR) / ${pricing_usd} (USD)
-
-Choose your preferred payment method:"""
+        text = "To Buy Premium Contact Admin"
         
         buttons = [
-            [InlineKeyboardButton("🇮🇳 Pay with UPI (INR)", callback_data=f"premium_inr_{plan}")],
-            [InlineKeyboardButton("💰 Pay with Crypto", callback_data=f"crypto_pay_{plan}")],
-            [InlineKeyboardButton("🌍 Pay with USD (Manual)", callback_data=f"premium_usd_{plan}")],
-            [InlineKeyboardButton("🔙 Back", callback_data="premium_select_plan")]
+            [InlineKeyboardButton("Contact Admin", url="https://t.me/Thekmx")]
         ]
         
         # Check if message has photo (from back button of QR screen)
@@ -2183,4 +2175,5 @@ def get_message_type(msg: pyrogram.types.messages_and_media.message.Message):
         msg.poll
         return "Poll"
     except:
+
         pass
