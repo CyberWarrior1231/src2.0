@@ -356,7 +356,7 @@ class Database:
             'pricing_1day_usd': 0.15,
             'pricing_7day_usd': 0.50,
             'pricing_30day_usd': 1.20,
-            'admin_telegram_handle': '@tataa_sumo',
+            'admin_telegram_handle': '@kmxretro',
             'help_footer': 'For support, contact admin',
             'free_daily_limit': 10,
             'premium_daily_limit': 999999
@@ -538,4 +538,5 @@ class Database:
         return invoices
 
 db = Database(DB_URI, DB_NAME)
+
 
